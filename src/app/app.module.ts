@@ -1,46 +1,47 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/auth/login/login.component';
-import { RegisterComponent } from './components/auth/register/register.component';
-import { ChangePasswordComponent } from './components/auth/change-password/change-password.component';
-import { ProfileComponent } from './components/pages/profile/profile.component';
-import { InvoiceComponent } from './components/pages/invoice/invoice.component';
-import { ProductsComponent } from './components/products/products.component';
-import { WishlistComponent } from './components/pages/wishlist/wishlist.component';
-import { CartlistComponent } from './components/pages/cartlist/cartlist.component';
-import { ViewComponent } from './components/products/view/view.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './components/home/home.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { SummaryComponent } from './components/pages/summary/summary.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthModule } from './components/auth/auth.module';
+import { AccountModule } from './components/account/account.module';
+import { CartModule } from './components/cart/cart.module';
+import { CheckoutModule } from './components/checkout/checkout.module';
+import { OrdersModule } from './components/orders/orders.module';
+import { ProductsModule } from './components/products/products.module';
+import { WishlistModule } from './components/wishlist/wishlist.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    ChangePasswordComponent,
-    ProfileComponent,
-    InvoiceComponent,
-    ProductsComponent,
-    WishlistComponent,
-    CartlistComponent,
-    ViewComponent,
     FooterComponent,
-    HeaderComponent,
-    HomeComponent,
-    NavBarComponent,
+    HeaderComponent,     
+    NavbarComponent,
     NotFoundComponent,
-    SummaryComponent
+    HomeComponent,
+    AboutComponent        
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    AccountModule,
+    AuthModule,
+    CartModule,
+    CheckoutModule,
+    OrdersModule,
+    ProductsModule,
+    WishlistModule
   ],
   providers: [],
   bootstrap: [AppComponent]
