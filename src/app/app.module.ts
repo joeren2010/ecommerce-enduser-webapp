@@ -1,3 +1,4 @@
+import { ToastrModule } from 'ngx-toastr';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -41,7 +42,13 @@ import { WishlistModule } from './components/wishlist/wishlist.module';
     CheckoutModule,
     OrdersModule,
     ProductsModule,
-    WishlistModule
+    WishlistModule,
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      countDuplicates: true
+    }),    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,12 +6,33 @@
          <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" routerLink="/products" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-expanded="false">
+                  Products
+               </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" routerLink="/products/clothings">Clothings</a>
+                  <a class="dropdown-item" routerLink="/products/computers">Computers</a>
+                  <a class="dropdown-item" routerLink="/products/electronics">Electronics</a>
+                  <a class="dropdown-item" routerLink="/products/furnitures">Furnitures</a>
+                  <a class="dropdown-item" routerLink="/products/grocery">Grocery</a>
+                  <a class="dropdown-item" routerLink="/products/jewelry">Jewelry</a>
+               </div>
+            </li>
+         </ul>
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- 
             <li class="nav-item">
                <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
-            </li>
+            </li> 
+            -->
+            <!-- <li class="nav-item">
+               <a class="nav-link" routerLink="/products">Products</a>
+            </li> -->
             <li class="nav-item">
-               <a class="nav-link" routerLink="/about">About</a>
+               <a class="nav-link" routerLink="/about">About Us</a>
             </li>
             <li class="nav-item">
                <a class="nav-link" routerLink="/users">Users</a>
@@ -19,31 +40,39 @@
             <li class="nav-item">
                <a class="nav-link" routerLink="/orders">Orders</a>
             </li>
-            <li class="nav-item">
-               <a class="nav-link" routerLink="/products">Products</a>
-            </li>
-            <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" routerLink="/products" id="navbarDropdown" role="button"
-                     data-toggle="dropdown" aria-expanded="false">
-                     Products
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <li><a class="dropdown-item" routerLink="#">Create</a></li>
-                     <li><a class="dropdown-item" routerLink="#">Update</a></li>
-                     <li>
-                        <hr class="dropdown-divider">
-                     </li>
-                     <li><a class="dropdown-item" routerLink="#">View</a></li>
-                  </ul>
-               </li> -->
-            <li class="nav-item">
-               <a class="nav-link" routerLink="/auth/login">Login</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" routerLink="/auth/register">Register</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" routerLink="/auth/change-password">Change Password</a>
+            <!-- 
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" routerLink="/products" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-expanded="false">
+                  Products
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" routerLink="#">Create</a></li>
+                  <li><a class="dropdown-item" routerLink="#">Update</a></li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" routerLink="#">View</a></li>
+               </ul>
+            </li> 
+            -->
+         </ul>
+         <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" routerLink="/account" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-expanded="false">
+                  Account
+               </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" routerLink="/auth/login">Login</a>
+                  <a class="dropdown-item" routerLink="/auth/register">Register</a>
+                  <a class="dropdown-item" routerLink="/auth/change-password">Change Password</a>
+                  <a class="dropdown-item" routerLink="/account/my-orders">My Orders</a>
+                  <a class="dropdown-item" routerLink="/account/my-profile">My Profile</a>
+                  <a class="dropdown-item" routerLink="/account/payments">Payment Info</a>
+                  <a class="dropdown-item" routerLink="/account/preferences">Preferences</a>
+                  <a class="dropdown-item" routerLink="/auth/login">Logout</a>
+               </div>
             </li>
          </ul>
          <form class="d-flex">
