@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { CheckoutModule } from './components/checkout/checkout.module';
 import { OrdersModule } from './components/orders/orders.module';
 import { ProductsModule } from './components/products/products.module';
 import { WishlistModule } from './components/wishlist/wishlist.module';
+import { ProductsService } from './services/products.service';
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { WishlistModule } from './components/wishlist/wishlist.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -50,7 +53,7 @@ import { WishlistModule } from './components/wishlist/wishlist.module';
       countDuplicates: true
     }),    
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

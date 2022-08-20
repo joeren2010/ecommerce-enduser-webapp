@@ -35,7 +35,14 @@
                <a class="nav-link" routerLink="/about">About Us</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" routerLink="/users">Users</a>
+               <a class="nav-link" routerLink="/cart">My Cart</a>
+               <span class="badge badge-light ml-1" *ngIf="productsService.products.length !== 0">
+                  {{productsService.products.length || 0 }}</span>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" routerLink="/wishlist">Wishlist</a>
+               <span class="badge badge-light ml-1" *ngIf="productsService.wishlistProducts.length !== 0">
+                  {{productsService.wishlistProducts.length || 0 }}</span>
             </li>
             <li class="nav-item">
                <a class="nav-link" routerLink="/orders">Orders</a>
