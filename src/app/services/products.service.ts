@@ -10,6 +10,7 @@ export class ProductsService {
 
   public products: any[] = [];
   public wishlistProducts: any[] = [];
+  public savedItems: any[] = [];
   productsRetreived: boolean = false;
 
   productsSub: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
@@ -41,6 +42,7 @@ export class ProductsService {
 
     if(prdRemoveBool) {
       this.wishlistProducts.splice(prdIdx, 1);
+      this.savedItems.splice(prdIdx, 1);
     }
     // this.prodSub.next([...this.cartProducts]);
   }
@@ -51,13 +53,34 @@ export class ProductsService {
         ...prd,
         "quantity": 1
       }); 
-      this.toast.success(prd['title'], "Product Added to Whishlist");
+      this.toast.success(prd['title'], "Product Added to Wishlist");
     } else {
-      this.toast.info(prd['title'], "Already Added to Whishlist");
+      this.toast.info(prd['title'], "Already Added to Wishlist");
     }
 
     if(prdRemoveBool) {
       this.products.splice(prdIdx, 1);
     }
   }
+
+  saveForLater(prd: any, prdRemoveBool: boolean = false, prdIdx: number = -1) {
+    if(!this.savedItems.some(x => x["id"] === prd["id"])) {
+      this.savedItems.push({
+        ...prd,
+        "quantity": 1
+      }); 
+      this.toast.success(prd['title'], "Product Successfully Saved For Later");
+    } else {
+      this.toast.info(prd['title'], "Product Already In Saved Items");
+    }
+
+    if(prdRemoveBool) {
+      this.products.splice(prdIdx, 1);
+    }
+  }
+
+
+  // saveForLater(prd: any, removeBool: boolean, prdIdx: number) {
+  //   throw new Error('Method not implemented.');
+  // }
 }
