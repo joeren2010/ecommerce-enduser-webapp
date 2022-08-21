@@ -6,13 +6,15 @@ import { CancelledOrdersComponent } from './cancelled-orders/cancelled-orders.co
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OrderViewComponent } from './order-view/order-view.component';
 
 
 @NgModule({
   declarations: [
     OrdersComponent,
     TrackOrdersComponent,
-    CancelledOrdersComponent    
+    CancelledOrdersComponent,
+    OrderViewComponent    
   ],
   imports: [
     CommonModule,

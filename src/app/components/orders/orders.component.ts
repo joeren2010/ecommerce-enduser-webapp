@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-orders',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersComponent implements OnInit {
 
-  constructor() { }
+  ordersObservable?: Observable<any[]>;
+
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+    this.ordersObservable = this.httpClient.get<any[]>("assets/data/orders.json");
   }
 
 }
