@@ -10,7 +10,7 @@
             <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" routerLink="/products" id="navbarDropdown" role="button"
                   data-toggle="dropdown" aria-expanded="false">
-                  Products
+                  Categories
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" routerLink="/products/clothings">Clothings</a>
@@ -26,21 +26,23 @@
                   <a class="nav-link" routerLink="/about">About Us</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" routerLink="/cart">My Cart</a>
-                  <span class="badge badge-light ml-1" *ngIf="productsService.products.length !== 0">
-                     {{productsService.products.length || 0 }}</span>
+                  <a class="nav-link" routerLink="/cart">My Cart
+                     <span class="badge badge-light ml-1" *ngIf="productsService.products.length !== 0">
+                        {{productsService.products.length || 0 }}</span>
+                  </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" routerLink="/wishlist">Wishlist</a>
-                  <span class="badge badge-light ml-1" *ngIf="productsService.wishlistProducts.length !== 0">
-                     {{productsService.wishlistProducts.length || 0 }}</span>
+                  <a class="nav-link" routerLink="/wishlist">Wishlist
+                     <span class="badge badge-light ml-1" *ngIf="productsService.wishlistProducts.length !== 0">
+                        {{productsService.wishlistProducts.length || 0 }}</span>
+                  </a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" routerLink="/orders">Orders</a>
                </li>
             </ul>
          </ul>
-         <ul class="navbar-nav ml-auto">
+         <ul class="navbar-nav ml-auto mr-15">
             <form class="d-flex">
                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                <button class="btn btn-outline-light" type="submit">Search</button>
@@ -48,7 +50,7 @@
             <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" routerLink="/account" id="navbarDropdown" role="button"
                   data-toggle="dropdown" aria-expanded="false">
-                  <strong> Account </strong>
+                  <strong> My Account </strong>
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" routerLink="/auth/login">Login</a>

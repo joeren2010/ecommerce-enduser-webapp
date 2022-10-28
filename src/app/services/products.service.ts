@@ -31,7 +31,7 @@ export class ProductsService {
     if(this.products.some(x => x["id"] === prd["id"])) {
       let idx = this.products.findIndex(x => x["id"] === prd["id"]);
       this.products[idx]["quantity"] += 1; 
-      this.toast.info(prd['title'], "Alreay Added to Cart, Quantity Updated")
+      this.toast.info(prd['title'], "Already Added to Cart, Quantity Updated")
     } else {
       this.products.push({
         ...prd,
